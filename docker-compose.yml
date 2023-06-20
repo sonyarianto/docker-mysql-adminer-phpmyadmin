@@ -13,13 +13,13 @@ services:
       - db_data:/var/lib/mysql
 
   adminer:
-    image: adminer
+    image: adminer:latest
     restart: always
     ports:
       - 8080:8080
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin/phpmyadmin:latest
     restart: always
     ports:
       - 8081:80
