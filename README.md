@@ -8,6 +8,9 @@ Docker recipe with MySQL (server), Adminer (db management) and phpMyAdmin (anoth
 - For note to myself.
 - For inspiration to other users.
 
+## Requirements
+- Docker installed on your machine, or just use Play with Docker [https://labs.play-with-docker.com/] to have fun.
+
 ## How to run?
 
 First please have a look on some config on MySQL container, open `docker-compose.yml` and look on `db` section, you should adjust it to fit your needs, such as password, username etc.
