@@ -3,7 +3,7 @@ Docker recipe with MySQL (server), Adminer (db management) and phpMyAdmin (anoth
 
 ## Use case
 - For educational material.
-- For you that want to start MySQL container with database management included.
+- For you that want to start MySQL container with database management included (Adminer/phpMyAdmin).
 - For development environment that use MySQL.
 - For note to myself.
 - For inspiration to other users.
