@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ROOT_PASSWORD_HERE
+      MYSQL_DATABASE: DATABASE_NAME_HERE
+      MYSQL_USER: USERNAME_NON_ROOT_HERE
+      MYSQL_PASSWORD: PASSWORD_NON_ROOT_HERE
+    volumes:
+      - db_data:/var/lib/mysql
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8081:80
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+
+volumes:
+  db_data:
